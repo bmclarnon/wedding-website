@@ -1,0 +1,97 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#main {
+  background-color: #f0e3d8;
+  border: 2px solid #e1d7cb;
+  border-radius: 3px;
+  font-family: "Playfair Display", serif;
+  margin: 15px 20px;
+  min-width: 541px;
+  padding: 10px 30px 20px;
+}
+
+#main img {
+  border: 1px solid #e1d7cb;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+#main h1 {
+  font-size: 32px;
+  margin: 20px 0 0;
+  text-align: center;
+}
+
+h1 + div.hr {
+  margin-bottom: 10px;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.left-float {
+  float: left;
+  margin-right: 15px;
+}
+
+#header {
+  font-family: Trocchi, serif;
+  font-size: 32px;
+  margin: 0 auto;
+  width: 541px;
+  text-align: center;
+}
+
+#header + * {
+  margin-top: 30px;
+}
+
+#names {
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  font-variant: small-caps;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+#nav > div:first-child {
+  background: url(/img/banner.jpg) no-repeat;
+  height: 210px;
+  width: 100%;
+}
+
+#nav a {
+  background: rgba(240, 227, 216, 0.75);
+  border-radius: 4px;
+  color: black;
+  font-size: 16px;
+  margin: 0px 8px;
+  padding: 0px 4px;
+  text-decoration: none;
+}
+
+#nav a:hover, #nav a.selected {
+  background: rgba(205, 200, 177, 0.75);
+}
+
+#nav > .hr {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+#header .hr {
+  width: 537px;
+}
+
+.hr {
+  border: 2px solid black;
+  border-radius: 2px;
+  margin: 0 auto;
+  padding-top: 1px;
+  width: 425px;
+}
