@@ -1,3 +1,4 @@
 [submodule "www"]
 	path = www
 	url = https://github.com/bmclarnon/bmclarnon.github.io
+	branch = master
