@@ -1,6 +1,6 @@
-<title>{% block title %}{% endblock %}</title>
+<title>Jen &amp; Brett{{ ' | ' ~ title if title }}</title>
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Trocchi" rel="stylesheet" type="text/css">
-<link href="/css/main.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
 <div id="main">
 <div id="header">
   <div style="margin-bottom: 10px;">Life together.</div>
@@ -11,10 +11,10 @@
     <div>
       <div>Starting: August 20th, 2016</div>
       <div style="margin-top: 125px;">
-        <a href="/about">About Us</a>
-        <a href="/accomodations">Accomodations</a>
-        <a href="/wedding">The Wedding</a>
-        <a href="/rsvp">RSVP</a>
+        <a href="about.html" {{ 'class="selected"' if title == 'About Us' }}>About Us</a>
+        <a href="accomodations.html" {{ 'class="selected"' if title == 'Accomodations' }}>Accomodations</a>
+        <a href="wedding.html" {{ 'class="selected"' if title == 'The Wedding' }}>The Wedding</a>
+        <a href="rsvp.html" {{ 'class="selected"' if title == 'RSVP' }}>RSVP</a>
       </div>
     </div>
     <div class="hr"></div>

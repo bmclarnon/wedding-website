@@ -60,7 +60,7 @@ h1 + div.hr {
 }
 
 #nav > div:first-child {
-  background: url(/img/banner.jpg) no-repeat;
+  background: url(../img/banner.jpg) no-repeat;
   height: 210px;
   width: 100%;
 }
