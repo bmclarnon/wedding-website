@@ -4,7 +4,7 @@ body {
 }
 
 #main {
-  background-color: #f0e3d8;
+  background: #f0e3d8 url(../img/noise.png);
   border: 2px solid #e1d7cb;
   border-radius: 3px;
   font-family: "Playfair Display", serif;
