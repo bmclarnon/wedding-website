@@ -2,6 +2,38 @@
 
 {% set title = 'The Wedding' %}
 
+{% block head %}
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+  function initialize() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 47.554, lng: -122.077},
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+    new google.maps.Marker({
+        position: {lat: 47.611555, lng: -122.297509},
+        map: map,
+        title: 'Cocktails',
+        label: '\u27C7'
+    });
+    new google.maps.Marker({
+        position: {lat: 47.4502535, lng: -122.3110105},
+        map: map,
+        title: 'Seattle-Tacoma International Airport',
+        label: '\u2708'
+    });
+    new google.maps.Marker({
+        position: {lat: 47.5085475, lng: -121.8010089},
+        map: map,
+        title: 'Wedding',
+        label: '\u2764'
+    });
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+{% endblock %}
+
 {% block content %}
 <h1>Friday, August 19th, 2016</h1>
 <div class="hr"></div>
@@ -16,5 +48,8 @@ to or from the wedding, please let us know.
 <h1>Sunday, August 21st, 2016</h1>
 <div class="hr"></div>
 We know weddings, though joyous affairs, don't always leave much time for socializing with the bride and groom. We plan to be available Sunday morning for a brunch to spend more time with the friends and family who have journeyed to Seattle. 
-<!-- Rename to Wedding Weekend? -->
+
+<div id="map" class="center img" style="display: none; margin-top: 40px; height: 300px; width: 90%"></div>
+<script>document.getElementById('map').style.display = 'block';</script>
+
 {% endblock %}

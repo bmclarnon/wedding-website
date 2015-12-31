@@ -43,7 +43,7 @@ def main():
         batch.add(gmail_service.users().messages().send(userId=config['user_id'], body=body))
 
   try:
-    print batch.execute()
+    batch.execute()
   except Exception as error:
     print 'An error has occurred: {}'.format(error)
 

@@ -13,7 +13,7 @@ body {
   padding: 10px 30px 20px;
 }
 
-#main img {
+.img {
   border: 1px solid #e1d7cb;
   border-radius: 10px;
   max-width: 500px;
