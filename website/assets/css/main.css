@@ -9,14 +9,14 @@ body {
   border-radius: 3px;
   font-family: "Playfair Display", serif;
   margin: 15px 20px;
-  min-width: 541px;
+  min-width: 509px;
   padding: 10px 30px 20px;
 }
 
 .img {
   border: 1px solid #e1d7cb;
   border-radius: 10px;
-  max-width: 500px;
+  max-width: 460px;
 }
 
 #main h1 {
@@ -43,7 +43,7 @@ h1 + div.hr {
   font-family: Trocchi, serif;
   font-size: 32px;
   margin: 0 auto;
-  width: 541px;
+  width: 489px;
   text-align: center;
 }
 
@@ -60,8 +60,8 @@ h1 + div.hr {
 }
 
 #nav > div:first-child {
-  background: url(../img/banner.svg) no-repeat;
-  height: 210px;
+  background: url(../img/banner.svg) no-repeat center 65%;
+  height: 245px;
   width: 100%;
 }
 
@@ -76,7 +76,8 @@ h1 + div.hr {
 }
 
 #nav a:hover, #nav a.selected {
-  background: rgba(205, 200, 177, 0.75);
+  background: rgba(43, 67, 110, 0.75);
+  color: #090D16;
 }
 
 #nav > .hr {
@@ -85,13 +86,14 @@ h1 + div.hr {
 }
 
 #header .hr {
-  width: 537px;
+  border-width: 2px;
+  width: 485px;
 }
 
 .hr {
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 2px;
   margin: 0 auto;
   padding-top: 1px;
-  width: 425px;
+  width: 400px;
 }
