@@ -31,13 +31,16 @@ def main():
       for id, recipient in enumerate(config['recipients']):
         msg = MIMEText(tmpl.format(recipient=recipient['to'],
                                    we=config['we'],
-                                   signature=config['from'],
+                                   signature=config['signature'],
                                    cid=uuid.uuid4(),
                                    el='{}{}'.format(config['tracking_prefix'], id)),
                        'html')
         msg['subject'] = _SUBJECT
         msg['from'] = config['from']
         msg['to'] = recipient['email']
+        if id == 0:
+          print 'Sample:\n' + msg.as_string() + '\n\n'
+
         body = {'raw': base64.urlsafe_b64encode(msg.as_string())}
         print 'Adding {}'.format(recipient['email'])
         batch.add(gmail_service.users().messages().send(userId=config['user_id'], body=body))

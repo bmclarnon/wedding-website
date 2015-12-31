@@ -1,7 +1,0 @@
-from: 'Brett McLarnon <brett.mclarnon@gmail.com>'
-user_id: 'brett.mclarnon@gmail.com'
-we: 'Jen and I'
-from: 'Brett &amp; Jen'
-tracking_prefix: 'T'
-recipients:
-  - {to: 'Brett', email: 'Brett McLarnon <brett.mclarnon@gmail.com>'}
