@@ -4,6 +4,7 @@ import base64
 from email.mime.text import MIMEText
 import httplib2
 import sys
+import uuid
 import yaml
 
 from apiclient import discovery
@@ -27,10 +28,12 @@ def main():
     tmpl = tmpl_file.read()
     with open(sys.argv[2], 'r') as config_file:
       config = yaml.load(config_file)
-      for recipient in config['recipients']:
+      for id, recipient in enumerate(config['recipients']):
         msg = MIMEText(tmpl.format(recipient=recipient['to'],
                                    we=config['we'],
-                                   signature=config['from']),
+                                   signature=config['from'],
+                                   cid=uuid.uuid4(),
+                                   el='{}{}'.format(config['tracking_prefix'], id)),
                        'html')
         msg['subject'] = _SUBJECT
         msg['from'] = config['from']
