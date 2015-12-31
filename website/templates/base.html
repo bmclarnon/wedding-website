@@ -31,4 +31,6 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-71870191-1', 'auto');
   ga('send', 'pageview');
+
+  (function(s,m){m=s.match(/[?&]el=([^&]+)/);m&&ga('send','event','email','clickthrough',m[1]);})(window.location.search);
 </script>

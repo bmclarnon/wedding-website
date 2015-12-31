@@ -2,6 +2,7 @@
 
 import base64
 from email.mime.text import MIMEText
+import hashlib
 import httplib2
 import sys
 import uuid
@@ -29,11 +30,13 @@ def main():
     with open(sys.argv[2], 'r') as config_file:
       config = yaml.load(config_file)
       for id, recipient in enumerate(config['recipients']):
+        el = '{}{:02}'.format(config['tracking_prefix'], id)
+        el += base64.b32encode(hashlib.md5(el).digest())[:2]
         msg = MIMEText(tmpl.format(recipient=recipient['to'],
                                    we=config['we'],
                                    signature=config['signature'],
                                    cid=uuid.uuid4(),
-                                   el='{}{}'.format(config['tracking_prefix'], id)),
+                                   el=el),
                        'html')
         msg['subject'] = _SUBJECT
         msg['from'] = config['from']
