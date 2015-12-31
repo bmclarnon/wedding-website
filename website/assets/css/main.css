@@ -29,6 +29,11 @@ h1 + div.hr {
   margin-bottom: 10px;
 }
 
+#main iframe {
+  border: 2px solid #e1d7cb;
+  border-radius: 10px;
+}
+
 .center {
   display: block;
   margin: 0 auto;
@@ -66,7 +71,7 @@ h1 + div.hr {
 }
 
 #nav a {
-  background: rgba(240, 227, 216, 0.75);
+  background: rgba(134, 150, 179, 0.75);
   border-radius: 4px;
   color: black;
   font-size: 16px;
