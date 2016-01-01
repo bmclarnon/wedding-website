@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <title>Jen &amp; Brett{{ ' | ' ~ title if title }}</title>
+<meta name="viewport" content="width=device-width" />
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display%7CTrocchi" rel="stylesheet" type="text/css">
 <link href="css/main.css" rel="stylesheet" type="text/css">
 {% block head %}{% endblock %}
 <div id="main">
 <div id="header">
-  <div style="margin-bottom: 10px;">Life together.</div>
-  <div class="hr"></div>
-  <div id="names">Jen &amp; Brett</div>
-  <div class="hr" style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;"></div>
-  <div id="nav">
-    <div>
-      <div>Starting: August 20th, 2016</div>
-      <div style="margin-top: 160px;">
+  <div>
+    <div style="font-size: 200%; margin-bottom: 10px;">Life together.</div>
+    <div class="hr"></div>
+    <div id="names">Jen &amp; Brett</div>
+    <div id="nav">
+      <img src="img/banner.svg" alt="">
+      <div class="nav-header">Starting: August 20th, 2016</div>
+      <div class="nav-footer">
         <a href="about.html" {{ 'class="selected"' if title == 'About Us' }}>About Us</a>
         <a href="accomodations.html" {{ 'class="selected"' if title == 'Accomodations' }}>Accomodations</a>
         <a href="wedding.html" {{ 'class="selected"' if title == 'The Wedding' }}>The Wedding</a>
         <a href="rsvp.html" {{ 'class="selected"' if title == 'RSVP' }}>RSVP</a>
       </div>
     </div>
-    <div class="hr"></div>
   </div>
 </div>
 {% block content %}{% endblock %}
