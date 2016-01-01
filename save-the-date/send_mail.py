@@ -12,7 +12,7 @@ from apiclient import discovery
 from oauth2client import client
 
 
-_SUBJECT = 'Save the Date for Jen & Brett\'s Wedding'
+_SUBJECT = 'Jen & Brett\'s Wedding: Save the Date'
 
 
 def main():
