@@ -129,6 +129,7 @@ h1 > span:after {
 }
 
 #nav img {
+  height: auto;
   width: 100%;
 }
 
