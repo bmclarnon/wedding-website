@@ -45,7 +45,7 @@ def main():
           print 'Sample:\n' + msg.as_string() + '\n\n'
 
         body = {'raw': base64.urlsafe_b64encode(msg.as_string())}
-        print 'Adding {}'.format(recipient['email'])
+        print 'Adding {} ({})'.format(recipient['email'], el)
         batch.add(gmail_service.users().messages().send(userId=config['user_id'], body=body))
 
   try:
